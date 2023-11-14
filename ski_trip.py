@@ -1,5 +1,15 @@
 days = int(input())
 type_of_room = input()
+value = input()
+nights = days - 1
+price_per_night = 0
+if type_of_room == "room for one person":
+    price_per_night = 18
+elif type_of_room == "apartment":
+    price_per_night = 25
+    if nights < 10:
+        price_per_night *= 0.7
+    elif 10 <= nights <= 15:
         price_per_night *= 0.65
     elif nights > 15:  #else
         price_per_night *= 0.5
